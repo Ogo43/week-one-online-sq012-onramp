@@ -1,4 +1,4 @@
-# Challenge 1
+# Challenge x
 
 Implement a function secondLargest(arr) that takes an array of numbers and returns the second largest number.
 
