@@ -1,0 +1,269 @@
+/* .container{
+    border:3px solid red;
+    height:100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.container div{
+   width:100%;
+   border:3px solid teal; 
+}
+/* responsiveness */
+/* @media screen and (max-width: 890px){
+    .container {
+        grid-template-columns: 1fr;
+    }
+} */ 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Shippori+Antique+B1&family=Trispace:wght@600&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e9e9fb;
+}
+
+.box{
+    height: 90vh;
+    background-color: tomato;
+    width: 12rem;
+    border-radius: 20px;
+    position: absolute;
+    transform: translate( 8rem, -2rem);
+}
+
+/* relative position is the image you want to move around */
+/* absolute position is the image that is fixed, you want to place the relative image on */
+
+.container{
+    position: relative; 
+    display: flex;
+    height: 80vh;
+    /* border: 3px solid red; */
+    max-width: 1000px;
+    margin: 100px auto 0 auto;
+    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0.7px 1.4px 1.4px hsl( 0deg, 0, 0%, 0%);
+    border-radius: 20px;
+
+}
+
+.sidebar{
+    background: #f1f1fb;
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.img_wrapper{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 40px;
+    
+}
+
+.wrapper img{
+    width: 50px;
+    height: 50px;
+    border-radius: 16px; 
+}
+
+.nav_link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: gray;
+    font-weight: 700;
+}
+
+i{
+    font-size: 6rems;
+}
+p{
+    font-size: 12px;
+}
+
+.active{
+    font-weight: 700px;
+    border-left: 4px solid red;
+    border-radius: 2px;
+    padding: 10px;
+    transform: translateX(-16px);
+    color: #000;
+}
+.main_content{
+    flex: 2;
+    padding: 2.5rem;
+    background-color: white;   
+}
+.main_content h5{
+    margin-top: 30px;
+    margin-bottom: 8px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;   
+}
+
+.text{
+    font-size: 11px;
+    color: gray;
+    font-weight: 700;
+}
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;   
+}
+.content-header h5{
+    color: rgb(132, 122, 122);
+    font-weight: 700;
+}
+.content-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px auto;
+    font-size: 7px;
+    font-weight: bold;
+}
+.btn{
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #ccc;
+    padding: 3px 11px 3px 11px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+.load-more{
+    color: tomato;
+    font-weight: bold;
+    font-size: 10px;
+}
+h6{
+    margin-top: 2rem;
+    text-decoration: solid;
+    color: hsl(0, 0%, 0%,);
+}
+.text{
+    font-size: 8px;
+    font-weight: 800;
+    margin-top: 1px;
+}
+
+.footer{
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+}
+.footer .visa{
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 5px;
+    padding: 5px;
+    font-style: italic;
+}
+.footer .ending{
+    border: 1px solid white;
+    margin-left: 5px;
+    font-style: normal;
+}
+.footer .remove{
+    margin-inline-start: auto;
+    color: #000;
+}
+.right_bar{
+    flex: 1;
+    background-color:tomato;
+    padding-left: 5rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    margin-top: 4rem;
+    margin-left: 4rem;
+    margin-right: 6rem;
+    height: 8rem;
+    box-sizing: content-box;
+    color: white;
+    border-radius: 15px;
+}
+h3{
+    margin-top: 10px;
+    margin-bottom: 1px;
+}
+span{
+    font-size: 12px;
+}
+.cancel{
+    margin-top: 20px;
+}
+.cancel a{
+    color: white;
+    border: 1px solid white;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 992px){
+    .box{
+        display: none;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .content-header{
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+    .footer{
+        /* display: block; */
+    }
+    .footer p{
+        margin: 1.2rem 0;
+    }
+
+    
+@media screen and (max-width: 600px){
+    .main-content{
+        padding-left: 1rem;
+    }
+    .content-header{
+        justify-content: space-between;
+        gap: 30%;
+    }
+    .content-text{
+        flex-wrap: wrap;
+    }
+@media screen and (max-width: 280px){
+    .content-text{
+        align-items: inherit;
+        column-gap: 1%;
+        row-gap: 1%;
+    }
+    .right_bar{
+        padding-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 2rem;
+}
+    .cancel{
+        margin-top: 5px;
+    }
+    media screen and (max-width: 360px){
+        
+    }
+    
+}
